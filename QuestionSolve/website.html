@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IntyajMedia - Download Movies & Songs</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        header {
+            background: linear-gradient(to right, #1a1a1a, #333);
+            color: white;
+            padding: 2rem;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(45deg, rgba(0,0,0,0.7), rgba(0,0,0,0.3));
+            z-index: 1;
+        }
+
+        header > * {
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero-title {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+
+        .search-container {
+            max-width: 600px;
+            margin: 1.5rem auto;
+            padding: 0 1rem;
+        }
+
+        .search-bar {
+            width: 100%;
+            padding: 1rem 1.5rem;
+            border-radius: 30px;
+            border: none;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            font-size: 1.1rem;
+            background: rgba(255,255,255,0.95);
+        }
+
+        .search-bar:focus {
+            outline: none;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+        }
+
+        nav {
+            background: #333;
+            padding: 1rem;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 1.5rem;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            transition: all 0.3s;
+            font-weight: 500;
+        }
+
+        nav a:hover {
+            background-color: #007bff;
+        }
+
+        .main-content {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+
+        .section-title {
+            margin: 2rem 0 1.5rem;
+            color: #333;
+            font-size: 1.8rem;
+            position: relative;
+            padding-bottom: 0.5rem;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 60px;
+            height: 4px;
+            background: #007bff;
+            border-radius: 2px;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 2rem;
+            padding: 1rem 0;
+        }
+
+        .card {
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            transition: all 0.3s;
+            overflow: hidden;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+        }
+
+        .card img {
+            width: 100%;
+            height: 350px;
+            object-fit: cover;
+            border-radius: 12px 12px 0 0;
+        }
+
+        .card-content {
+            padding: 1.5rem;
+        }
+
+        .card-content h3 {
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+            color: #333;
+        }
+
+        .card-content p {
+            color: #666;
+            margin-bottom: 1rem;
+        }
+
+        .download-btn {
+            display: block;
+            background: #007bff;
+            color: white;
+            text-decoration: none;
+            padding: 1rem;
+            text-align: center;
+            border-radius: 6px;
+            font-weight: 500;
+            transition: all 0.3s;
+        }
+
+        .download-btn:hover {
+            background: #0056b3;
+            transform: scale(1.02);
+        }
+
+        .featured-badge {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            background: #ff3366;
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+        }
+
+        footer {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 2rem;
+            margin-top: 3rem;
+        }
+
+        @media (max-width: 768px) {
+            .grid {
+                grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            }
+            
+            .card img {
+                height: 280px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1 class="hero-title">IntyajMedia.com</h1>
+        <p>Your Ultimate Source for Movies and Songs</p>
+        <div class="search-container">
+            <input type="text" class="search-bar" placeholder="Search for movies, songs, artists...">
+        </div>
+    </header>
+
+    <nav>
+        <a href="#">Home</a>
+        <a href="#movies">Movies</a>
+        <a href="#songs">Songs</a>
+        <a href="#about">About</a>
+    </nav>
+
+    <div class="main-content">
+        <section id="movies">
+            <h2 class="section-title">Latest Movies</h2>
+            <div class="grid">
+                <div class="card">
+                    <img src="/api/placeholder/400/320?text=Dune:+Part+Two" alt="Dune: Part Two">
+                    <div class="card-content">
+                        <h3>Dune: Part Two</h3>
+                        <p>2024 • Sci-Fi/Adventure • 4K HDR</p>
+                        <a href="#" class="download-btn">Download Now</a>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="/api/placeholder/400/320?text=Madame+Web" alt="Madame Web">
+                    <div class="card-content">
+                        <h3>Madame Web</h3>
+                        <p>2024 • Action/Superhero • HD</p>
+                        <a href="#" class="download-btn">Download Now</a>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="/api/placeholder/400/320?text=Bob+Marley:+One+Love" alt="Bob Marley: One Love">
+                    <div class="card-content">
+                        <h3>Bob Marley: One Love</h3>
+                        <p>2024 • Biography/Drama • 4K</p>
+                        <a href="#" class="download-btn">Download Now</a>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="/api/placeholder/400/320?text=Anyone+But+You" alt="Anyone But You">
+                    <div class="card-content">
+                        <h3>Anyone But You</h3>
+                        <p>2024 • Romance/Comedy • HD</p>
+                        <a href="#" class="download-btn">Download Now</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="songs">
+            <h2 class="section-title">Popular Songs</h2>
+            <div class="grid">
+                <div class="card">
+                    <img src="/api/placeholder/400/320?text=The+Tortured+Poets+Department" alt="Taylor Swift Album">
+                    <div class="card-content">
+                        <h3>The Tortured Poets Department</h3>
+                        <p>Taylor Swift • Pop • 2024</p>
+                        <a href="#" class="download-btn">Download Now</a>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="/api/placeholder/400/320?text=This+Is+Me...Now" alt="Jennifer Lopez Album">
+                    <div class="card-content">
+                        <h3>This Is Me...Now</h3>
+                        <p>Jennifer Lopez • Pop • 2024</p>
+                        <a href="#" class="download-btn">Download Now</a>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="/api/placeholder/400/320?text=For+All+The+Dogs" alt="Drake Album">
+                    <div class="card-content">
+                        <h3>For All The Dogs</h3>
+                        <p>Drake • Hip-Hop • 2024</p>
+                        <a href="#" class="download-btn">Download Now</a>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="/api/placeholder/400/320?text=Hackney+Diamonds" alt="Rolling Stones Album">
+                    <div class="card-content">
+                        <h3>Hackney Diamonds</h3>
+                        <p>Rolling Stones • Rock • 2024</p>
+                        <a href="#" class="download-btn">Download Now</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 IntyajMedia.com. All rights reserved.</p>
+    </footer>
+</body>
+</html>

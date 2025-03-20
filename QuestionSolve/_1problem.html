@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta neme="viewport" content="width=device=width,initial-scale=1.0">
+        <title>first webpage</title>
+    </head>
+    <body>
+        <h3>problem 1:Basic Structure</h3>
+        <!--
+            Create a basic HTML page woth the title 
+            "my fist web page" and a headin that says "welcome my website".
+        -->
+        <h2>Welcome to My Website</h2>
+
+        <h3> problem 2: Paragraph and line break:-</h3>
+        <!--
+            Paragraph and line breaks
+            Add three paragraphs of text to your html page,
+            with the second paragraph containing a line break
+            in the middle.
+        -->         
+        <p>This is our first paragraph.</p>
+        <p>This is our second <br>pragraph.</p>
+        <p>This is our third paragraph.</p>
+
+        
+        <h3>Problem 3: Text Formatting:-</h3>        
+        <!--
+            text formatting
+            use html to bold, italic, and underline different parts of a single paragraph.    
+        -->
+            <p><i>Hello</i>,My Name is <u>Intiyaj Ansari</u>. I am a <b>Software Developer</b> in future.</p>
+       
+            
+        <h3><mark>problem 4:</mark></h3>
+        <!--
+            create a webpage eith all levels of headings(h1-h6)
+            and observe the differnces in size.
+        -->
+        <center>
+            <h1>Intiyaj Raj</h1>
+            <h2>Intiyaj Raj</h2>
+            <h3>Intiyaj Raj</h3>
+            <h4>Intiyaj Raj</h4>
+            <h5>Intiyaj Raj</h5>
+            <h6>Intiyaj Raj</h6>
+        </center>
+        
+       
+        <h3>problem 5: lists</h3>
+        <!--
+            create an ordred list of three favourite movies.
+            create an unordered list of three favorites movies.
+        -->   
+            <h2><mark>Orderd List</mark></h2>
+            <ol>
+                <li>Rab Ne Bana Di Jodi</li>
+                <li>Jab Tak Hai Jan</li>
+                <li>Sanam Teri Kasam</li>
+            </ol>
+            <h2><mark>unordered list</mark></h2>
+            <ul>
+                <li>Kabir Singh</li>
+                <li>Tere Naam</li>
+                <li>Maine Pyar Kiya</li>
+            </ul>
+
+            <h3>prolem 6:Links</h3>
+        <!--
+            Add a links to your favorite website with the text
+            "Click here to visit my favorite website"
+        -->
+      
+            <a href="https://www.youtube.com/" target="_blank">Click here to visit my favorite website</a>
+
+    
+        <h3>problem 7: images</h3>
+        
+        <!--
+            add an image to your html page,
+            use an online image URL        
+        -->
+        <img src="https://wallpaperaccess.com/full/3709687.jpg" alt="sarukh khan" width="400">
+
+        <h3>Problem 8: Nested list</h3>
+        <!--
+            create a nested list where one of the items in the ordered list contains an unordered list
+        -->
+            <ol>
+                <li>Item1</li>
+                <li>Item2
+                    <ul>
+                        <li>sublist2.1</li>
+                        <li>sublist2.2</li>
+                    </ul>
+                </li>
+            </ol>
+            <h3>problem 9: Tables</h3>
+            <!--
+                create a table with THREE columns and FOUR rows.
+                including handset for each column.
+            -->
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Header 1</th>
+                            <th>Header 2</th>
+                            <th>Header 3</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Row 1</td>
+                            <td>Row 1</td>
+                            <td>Row 1</td>
+                        </tr>
+                        <tr>
+                            <td>Row 2</td>
+                            <td>Row 2</td>
+                            <td>Row 2</td>
+                        </tr>
+                        <tr>
+                            <td>Row 3</td>
+                            <td>Row 3</td>
+                            <td>Row 3</td>
+                        </tr>
+                    </tbody>
+
+                </table>
+                
+
+                <h3>problem 10</h3>
+                <!--
+                    create a form witH an input fields for a name,an email, a password, and a submit button
+                -->
+
+                <h3>Example form:-</h3>
+
+                <form>
+                    <label>Name:</label>
+                    <input type="text" name="name" placeholder="Enter Your Name" required>
+                    <br><br>
+                    <label>Email:</label>
+                    <input type="email" name="email" placeholder="Enter your emailId" required>
+                    <br><br>
+                    <label>password:</label>
+                    <input type="password" name="password" placeholder="Enter password" required>
+                    <br><br>
+                    <input type="submit" name="submit" value="submit"> 
+                </form>
+
+                <!--
+                    Add a text area to your form with a label "comment".
+                -->
+                    <h3>Problem 11</h3>
+
+                    <form>
+                        <label for="comments">Comments</label>
+                        <br>
+                        <textarea id="cemments" rows="4" cols="50"></textarea>
+                    </form>
+                    
+        
+                <!--
+                    Add a group of radio buttons for selecting gender(male or female, other) 
+                        Add a group of checkboxes for selecting hobbies (e.g. Reading ,Traveling and Writing)
+                -->
+                        <h3>Problem 12</h3>
+                        <h3><mark>Form with Radio and checkbox</mark></h3>
+                        <form>
+                           <p>Gender: </p>
+                            <input type="radio" id="male" name="gender" value="male">
+                            <label for="gender">Male:</label>
+                            <br>
+                            <input type="radio" id="female" name="gender" value="female">
+                            <label for="gender">Female:</label>
+
+                            <p>Hobbies:</p>
+                            <input type="checkbox" id="reading" name="hobbies" value="reading">
+                            <label for="reading">Reading</label>
+                            <br>
+                            <input type="checkbox" id="traveling" name="hobbies" value="traveling">
+                            <label for="traveling">Traveling</label>
+                            <br>
+                            <input type="checkbox" id="cooking" name="hobbies" value="cooking">
+                            <label for="cooking">Cooking</label>
+                            <br>
+                            <input type="checkbox" id="Writing" name="hobbies" value="wrinting">
+                            <label for="wrinting">Writing</label>
+                            
+                        </form>
+                        
+
+    </body>
+</html>
